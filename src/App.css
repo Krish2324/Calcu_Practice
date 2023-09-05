@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&display=swap');
+:root {
+    --default-color: #59b7c5;
+    --default-text-color: #cbe1ff;
+    --white: #ffffff;
+    --black--first: #363e4d;
+    --black--second: #242933;
+    --main-black: #161a20;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: hsla(0, 0, 0, 0);
+    /* LONG HEXADECIMAL CODE*/
+    -webkit-tap-highlight-color: #00000000;
+    /* SHORT HEXADECIMAL CODE*/
+    -webkit-tap-highlight-color: #0000;
+}
+
+body {
+    background: var(--default-color);
+    background-color: #59b7c5;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 100%;
+    background-image: linear-gradient(to top right,rgba(33, 78, 174, 0.955),rgb(9, 215, 225));
+
+}
+
+body::-webkit-scrollbar {
+    display: none !important;
+}
+
+
+.PracticeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    max-width: 750px;
+    margin: 22px auto 29px auto;
+} 
+
+.PracticeContainer .Calculator{
+    height: 90vh;
+    width: 330px;
+    background-color: var(--main-black);
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+
+}
+
+.PracticeContainer .Calculator:hover{
+    box-shadow: 0px 5px 20px 5px rgb(35, 36, 37);
+    transition: all 0.5s ease;
+}
+
+.Aligned{
+    padding: 0.5rem 1rem;
+
+}
+
+.Calculator-Heading{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 0.5rem;
+    overflow: hidden;
+    color: #161a20;
+}
+.alternate-style{
+    color: yellowgreen;
+}
+
+.Calculator-Heading h3{
+    padding: 0.5rem;
+    background-color: var(--black--first);
+    font-size: 0.6rem;
+    font-weight: 900;
+    margin: auto;
+}
+
+.Calculator-Heading h3.Disable {
+    background-color: var(--default-text-color);
+}
+
+.Calculator-Screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.Calculator-Output {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 900;
+    max-width: 300px;   /*after all compilation we need to comment off */
+}
+
+.Calculator-Input {
+    background-color: var(--black--first);
+    padding: 0.4rem 1rem;
+    grid-template-columns: minmax(0px,50px) repeat(2,1fr);
+    font-size: 1.8rem;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.Calculator-Input span{
+    letter-spacing: 0.1rem;
+    color: var(--default-text-color);
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-y: scroll;
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Calculator-Input span::-webkit-scrollbar {
+    display: none !important;
+}
+
+.Calculator-Button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.5rem 1rem;
+}
+
+.Calculator-Button > Button {
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.5s linear;
+    text-transform: uppercase;
+    background-color: var(--black--first);
+    border: 3px solid var(--main-black);
+    border-radius: 10%;
+
+}
+
+.Calculator-Button > Button:hover {
+    border: none;
+    background-color: rgba(64, 187, 244, 0.303) !important;
+}
+
+.Calculator-Button > Button.Top-Btn:hover {
+    background-color: rgba(173, 173, 173, 0.496) !important;
+    color: #ffffff;
+    border-radius: 1rem;
+}
+
+.Calculator-Button > Button.Special-Btn:hover {
+    background-color: rgba(0, 255, 247, 0.496) !important;
+    color: #ffffff;
+    border-radius: 1rem;
+}
+
+.Calculator-Button > Button.Normal-Btn:hover {
+    background-color: var(--black--second);
+    border-radius: 4rem;
+}
+
+.Calculator-Button > Button.Top-Btn {
+    background-color: var(--black--first);
+    color: #649ddf;
+}
+
+.Calculator-Button > Button.Normal-Btn {
+    background-color: var(--black--second);
+}
+
+.Calculator-Button > Button.Special-Btn {
+    background-color: var(--default-color);
+    color: #00534f;
+}
+
+button {
+    border: unset;
+    box-shadow: unset;
+    color: var(--default-text-color);
+    cursor: pointer;
+}
+
+Button.Special-Btn {
+    background-color: var(--default-color);
+
+} 
+
+.Calculator-Wrapper {
+    display: grid;
+    height: 100%;
+    grid-auto-rows: 10% 28% 11% 51%;
+}
