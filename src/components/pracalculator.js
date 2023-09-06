@@ -11,22 +11,22 @@ function Pracalculator() {
         const targetElement = document.getElementById("target-element");
         console.log(targetElement,"Debugg");
         // Check the current CSS class and toggle it to switch styles
-        if (targetElement.classList.contains("Calculator-Heading")) {
+        if (targetElement.classList.contains("DefaultStyle")) {
             console.log("Checked Here")
-            targetElement.classList.remove("Calculator-Heading");
-            targetElement.classList.add("alternate-style");
+            targetElement.classList.remove("DefaultStyle");
+            targetElement.classList.add("NewStyle");
         } else {
             console.log("Checked")
 
-            targetElement.classList.remove("alternate-style");
-            targetElement.classList.add("Calculator-Heading");
+            targetElement.classList.remove("NewStyle");
+            targetElement.classList.add("DefaultStyle");
         }
     }
 
     return ( 
-        <div className = 'Calculator'>
+        <div className = 'Calculator' id="target-element">
             <div className = 'Calculator-Wrapper'>
-            <div className = 'Calculator-Heading Aligned'  id="target-element">
+            <div className = 'Calculator-Heading Aligned'>
                 <h3 className = "Disable">Calculator In React </h3>
             </div>
 
@@ -112,7 +112,7 @@ function Pracalculator() {
                     </Button>
                 </div>
         </div>
-    <button className="Calculator-Button" onClick={ChangeStyle}>Change Style</button>
+    <button className="Click-Button" onClick={ChangeStyle}>Change Style</button>
         
         </div>
         

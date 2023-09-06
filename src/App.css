@@ -1,13 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&display=swap');
-:root {
-    --default-color: #59b7c5;
-    --default-text-color: #cbe1ff;
+:root{
+    --default-color: #201f1f;
+    --default-text-color: #e1e1e1;
     --white: #ffffff;
-    --black--first: #363e4d;
-    --black--second: #242933;
-    --main-black: #161a20;
+    --black--first: #343434;
+    --black--second: #000000;
+    --main-black: #000000;
+    --default-btn-hover: #252525;
+}
+.DefaultStyle {
+    --default-color: #201f1f !important;
+    --default-text-color: #e1e1e1;
+    --white: #ffffff;
+    --black--first: #343434;
+    --black--second: #000000;
+    --main-black: #000000;
+    --default-btn-hover: #252525;
 }
 
+.NewStyle{
+    --default-color: #c3c2c3;
+    --default-text-color: #181818;
+    --white: #ffffff;
+    --black--first: #9b9aa1;
+    --black--second: #819eda;
+    --main-black: #ffffff;
+    --default-btn-hover: #a9a6a6;
+}
 * {
     margin: 0;
     padding: 0;
@@ -22,13 +41,13 @@
 }
 
 body {
-    background: var(--default-color);
-    background-color: #59b7c5;
+
+    background-color: var(--default-color) !important;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 100%;
-    background-image: linear-gradient(to top right,rgba(33, 78, 174, 0.955),rgb(9, 215, 225));
+    
 
 }
 
@@ -70,11 +89,11 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(2,1fr);
     margin-top: 0.5rem;
     overflow: hidden;
-    color: #161a20;
+    color: var(--default-color);
 }
-.alternate-style{
+/* .alternate-style{
     color: yellowgreen;
-}
+} */
 
 .Calculator-Heading h3{
     padding: 0.5rem;
@@ -101,7 +120,7 @@ body::-webkit-scrollbar {
     flex-direction: row;
     margin-bottom: 0.5rem;
     font-size: 2rem;
-    color: var(--white);
+    color: var(--default-text-color);
     font-weight: 900;
     max-width: 300px;   /*after all compilation we need to comment off */
 }
@@ -152,18 +171,16 @@ body::-webkit-scrollbar {
 
 .Calculator-Button > Button:hover {
     border: none;
-    background-color: rgba(64, 187, 244, 0.303) !important;
+    background-color: var(--default-btn-hover) !important;
 }
 
 .Calculator-Button > Button.Top-Btn:hover {
-    background-color: rgba(173, 173, 173, 0.496) !important;
-    color: #ffffff;
+    background-color: var(--default-btn-hover) !important;
     border-radius: 1rem;
 }
 
 .Calculator-Button > Button.Special-Btn:hover {
-    background-color: rgba(0, 255, 247, 0.496) !important;
-    color: #ffffff;
+    background-color: var(--default-btn-hover) !important;
     border-radius: 1rem;
 }
 
@@ -174,16 +191,17 @@ body::-webkit-scrollbar {
 
 .Calculator-Button > Button.Top-Btn {
     background-color: var(--black--first);
-    color: #649ddf;
+    color: var(--default-text-color);
 }
 
 .Calculator-Button > Button.Normal-Btn {
     background-color: var(--black--second);
+    color: var(--default-text-color);
 }
 
 .Calculator-Button > Button.Special-Btn {
     background-color: var(--default-color);
-    color: #00534f;
+    color: var(--default-text-color);
 }
 
 button {
@@ -197,6 +215,12 @@ Button.Special-Btn {
     background-color: var(--default-color);
 
 } 
+
+.Click-Button{
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: var(--default-text-color);
+}
 
 .Calculator-Wrapper {
     display: grid;
