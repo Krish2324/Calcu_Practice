@@ -91,9 +91,6 @@ body::-webkit-scrollbar {
     overflow: hidden;
     color: var(--default-color);
 }
-/* .alternate-style{
-    color: yellowgreen;
-} */
 
 .Calculator-Heading h3{
     padding: 0.5rem;
@@ -105,7 +102,6 @@ body::-webkit-scrollbar {
 
 .Calculator-Heading h3.Disable {
     background-color: var(--default-text-color);
-}
 
 .Calculator-Screen {
     display: flex;
